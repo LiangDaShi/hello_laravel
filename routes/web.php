@@ -23,3 +23,6 @@ Route::resource('users', 'UsersController');
 // GET    /users/{user}/edit    UsersController@edit    编辑用户个人资料的页面
 // PATCH    /users/{user}    UsersController@update    更新用户
 // DELETE    /users/{user}    UsersController@destroy    删除用户
+Route::get('/login', 'SessionsController@create')->name('login');
+Route::post('/login', 'SessionsController@store')->name('login');
+Route::delete('logout', 'SessionsController@destroy')->name('logout');
